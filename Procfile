@@ -1,1 +1,1 @@
-web: gunicorn DOCWEB.wsgi --log-file-
+web: gunicorn DOCWEB.wsgi 
