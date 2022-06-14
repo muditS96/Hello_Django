@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<h1> LOGIN PAGE</h1>
+
+
+<body>
+{% comment %} <body bgcolor="orange"> {% endcomment %}
+
+  {% block content %}
+  {% endblock  %}
+    <div class="limiter">
+      <form action=" /"method ="post" class="login100-form validate-form">
+        {% csrf_token %}
+        <input type="text" name ="username" placeholder="FirstName"><br>
+     
+        <input type="password" name ="password" placeholder="Password"><br>
+     
+        <input type="submit">
+        <button type="button" class="login100-form-btn" >
+        <a href="{% url 'register' %}"  method="post">NEW USER </a> 
+        </button>
+      </form>  
+
+
+    </div>
+
+    <div>
+    {% for message in messages%}
+    <h3> {{message}}</h3>
+    {% endfor %}
+    </div>    
+
+</body>
+</html>
